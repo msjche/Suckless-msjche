@@ -3,8 +3,8 @@
 /*  	| '_ ` _ \/ __|| |/ __| '_ \ / _ \		*/
 /*  	| | | | | \__ \| | (__| | | |  __/		*/
 /*  	|_| |_| |_|___// |\___|_| |_|\___|		*/
-/*    		         |__/						*/
-/*				MoJo's dwm config				*/
+/*                   |__/                       */
+/*              MoJo's dwm config               */
 
 /* See LICENSE file for copyright and license details. */
 /* appearance */
