@@ -15,7 +15,7 @@ static const int showbar			= 1;        /* 0 means no bar */
 static const int topbar				= 1;        /* 0 means bottom bar */
 static const int horizpadbar		= 6;        /* horizontal padding for statusbar */
 static const int vertpadbar			= 7;        /* vertical padding for statusbar */
-static const int iscentered			=1;			/* all windows spawn centered if floating */
+static const int iscentered			= 1;		/* all windows spawn centered if floating */
 static const char *fonts[]			= {"Dejavu Sans Mono for Powerline:size=9", 
 									"JoyPixels:size=10:antialias=true:autohint=true", 
 									"FontAwesome:size=10:antialias=true:autohint=true", 
