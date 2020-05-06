@@ -23,8 +23,15 @@ You may also change to using st for all functions by editing the following line:
 	vim ~/Suckless/dwm/config.h
 
 edit:
+
 	static const char *termcmd[]	= { "alacritty", NULL };
+
 to read:
+
 	static const char *termcmd[]	= { "st", NULL };
+
+Then recompile (while in ~/Suckless/dwm
+
+	sudo make install
 
 Cheers!
