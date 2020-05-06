@@ -1,5 +1,7 @@
 # msjche's Suckless dwm build
 
+![Alt text](screencap.png?raw=true "Title")
+
 You will need my scripts in your $PATH in order for the dwmblocks bar to populate.  Please refer to this repo:
 
 	https://github.com/msjche/.local-bin-scripts
