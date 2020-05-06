@@ -4,7 +4,7 @@ You will need my scripts in your $PATH in order for the dwmblocks bar to populat
 
 	https://github.com/msjche/.local-bin-scripts
 
-Once scripts are added and accessable:
+Once scripts are added and accessible:
 
 Installation:
 
