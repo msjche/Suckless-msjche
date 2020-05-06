@@ -1,4 +1,4 @@
-# .local-bin-scripts
+# msjche's Suckless dwm build
 
 You will need my scripts in your $PATH in order for the dwmblocks bar to populate.  Please refer to this repo:
 
