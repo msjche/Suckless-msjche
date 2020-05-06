@@ -159,9 +159,11 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioPlay,			spawn,		SHCMD("mpc pause") },
 
 	/* Screencast commands */
-	{ MODKEY,						XK_Delete,		spawn,		SHCMD("dmenurecord") },
-	{ MODKEY|ShiftMask,				XK_Delete,		spawn,		SHCMD("dmenurecord kill") },
-	{ MODKEY|Mod1Mask,				XK_k,			spawn,		SHCMD("killall screenkey || screenkey &") },
+	{ MODKEY,				XK_Delete,		spawn,		SHCMD("dmenurecord") },
+	{ MODKEY|ShiftMask,		XK_Delete,		spawn,		SHCMD("dmenurecord kill") },
+	{ MODKEY|Mod1Mask,		XK_k,			spawn,		SHCMD("killall screenkey || screenkey &") },
+	{ 0,					XK_Print,		spawn,		SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
+	{ ShiftMask,			XK_Print,		spawn,		SHCMD("maimpick") },
 
 	/* Switching between monitors */
 	{ MODKEY,               XK_comma,  focusmon,       {.i = -1 } },
@@ -186,15 +188,7 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask,        XK_h,    spawn,          CMD("st -e htop") },
 	{ MODKEY|Mod1Mask,        XK_n,    spawn,          CMD("st -e newsboat") },
 	{ MODKEY|Mod1Mask,        XK_r,    spawn,          CMD("st -e rtv") },
-	
-    /* Dmenu scripts launched with ALT + CTRL + KEY */
-	{ Mod1Mask|ControlMask, XK_e,      spawn,          CMD("./.dmenu/dmenu-edit-configs.sh") },
-	{ Mod1Mask|ControlMask, XK_m,      spawn,          CMD("./.dmenu/dmenu-sysmon.sh") },
-	{ Mod1Mask|ControlMask, XK_r,      spawn,          CMD("./.dmenu/dmenu-reddio.sh") },
-	{ Mod1Mask|ControlMask, XK_s,      spawn,          CMD("./.dmenu/dmenu-surfraw.sh") },
-	{ Mod1Mask|ControlMask, XK_i,      spawn,          CMD("./.dmenu/dmenu-scrot.sh") },
-
-	{ ControlMask, 			XK_x,      spawn,          CMD("pkill mpv") },
+	{ Mod1Mask, 			  XK_x,    spawn,          CMD("pkill mpv") },
 
 	TAGKEYS(                  XK_1,          0)
 	TAGKEYS(                  XK_2,          1)
