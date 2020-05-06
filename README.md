@@ -39,6 +39,10 @@ mine looks like this:
 	compton &
 	redshift &
 
+Finally, make the autostart executable:
+
+	chmod +x ~/.dwm/autostart.sh
+
 -------------------------------------
 
 You may also change to using st for all functions by editing the following line:
