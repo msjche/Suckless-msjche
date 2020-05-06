@@ -13,7 +13,7 @@ static const unsigned int snap		= 32;       /* snap pixel */
 static const unsigned int gappx		= 6;        /* pixel gap between clients */
 static const int showbar			= 1;        /* 0 means no bar */
 static const int topbar				= 1;        /* 0 means bottom bar */
-static const int horizpadbar		= 6;        /* horizontal padding for statusbar */
+static const int horizpadbar		= 5;        /* horizontal padding for statusbar */
 static const int vertpadbar			= 7;        /* vertical padding for statusbar */
 static const int iscentered			= 1;		/* all windows spawn centered if floating */
 static const char *fonts[]			= {"Dejavu Sans Mono for Powerline:size=9", 
