@@ -110,6 +110,7 @@ static Key keys[] = {
 	/* modifier             key        function        argument */
 	{ MODKEY|ShiftMask,		XK_Escape,	spawn,	SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Close Xorg?\")\" = Yes ] && killall Xorg") },
 	{ MODKEY,				XK_grave,	spawn,			SHCMD("dmenuunicode") },
+	{ MODKEY|ShiftMask,		XK_l,		spawn,			SHCMD("dmenu-lpass-nu") },
 	{ MODKEY|ControlMask,	XK_Delete,	spawn,			SHCMD("sysact") },
 	{ MODKEY|ShiftMask,     XK_Return,	spawn,          {.v = dmenucmd } },
 	{ MODKEY,               XK_Return, 	spawn,          {.v = termcmd } },
