@@ -162,8 +162,7 @@ static Key keys[] = {
 	{ MODKEY,				XK_Delete,		spawn,		SHCMD("dmenurecord") },
 	{ MODKEY|ShiftMask,		XK_Delete,		spawn,		SHCMD("dmenurecord kill") },
 	{ MODKEY|Mod1Mask,		XK_k,			spawn,		SHCMD("killall screenkey || screenkey &") },
-	{ 0,					XK_Print,		spawn,		SHCMD("maim pic-full-$(date '+%y%m%d-%H%M-%S').png") },
-	{ ShiftMask,			XK_Print,		spawn,		SHCMD("maimpick") },
+	{ 0,					XK_Print,		spawn,		SHCMD("maimpick") },
 
 	/* Switching between monitors */
 	{ MODKEY,               XK_comma,  focusmon,       {.i = -1 } },
@@ -175,6 +174,7 @@ static Key keys[] = {
 	{ MODKEY,        		  XK_b,    spawn,          CMD("qutebrowser") },
 	{ MODKEY|ShiftMask,       XK_b,    spawn,          CMD("brave") },
 	{ MODKEY,       		  XK_e,    spawn,          CMD("thunar") },
+	{ MODKEY,       		  XK_c,    spawn,          CMD("~/.dmenu/dmenu-edit-configs.sh") },
 	{ MODKEY|ShiftMask,		  XK_w,    spawn,          CMD("st -e nmtui") },
 	
     /* Apps Launched with SUPER + ALT + KEY */
