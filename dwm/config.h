@@ -21,7 +21,7 @@ static const char *fonts[]			= {"Dejavu Sans Mono for Powerline:size=9",
 									"FontAwesome:size=10:antialias=true:autohint=true", 
 									};
 static const char dmenufont[]		= "Dejavu Sans Mono for Powerline:size=9";
-static const char col_gray1[]		= "#333333";
+static const char col_gray1[]		= "#010015";
 static const char col_gray2[]		= "#333333"; /* border color unfocused windows */
 static const char col_gray3[]		= "#96B5B4";
 static const char col_gray4[]		= "#D7D7D7";
@@ -38,8 +38,8 @@ static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]        = {
 	/*               fg         bg         border   */
 	[SchemeNorm] = { col_gray4, col_gray1, col_gray2 },
-	[SchemeSel]  = { col_gray4, col_red,  col_red  },
-	[SchemeTitle]  = { col_gray4, col_blue,  col_blue  },
+	[SchemeSel]  = { col_gray4, col_red, col_yellow },
+	[SchemeTitle]  = { col_gray4, col_blue, col_blue },
 };
 static const unsigned int alphas[][3] = {
 	/*               fg      bg        border     */
@@ -49,7 +49,7 @@ static const unsigned int alphas[][3] = {
 
 /* tagging */
 /* static const char *tags[] = { "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "🎱", "9️⃣" }; */
-static const char *tags[] = { "🐧", "", "📰", "🥁", "🔍", "💀", "👷", "🕹", "📺" };
+static const char *tags[] = { "🐧", "", "📰", "🎵", "🔍", "💀", "👷", "🕹", "📺" };
 
 
 static const Rule rules[] = {
