@@ -1,6 +1,7 @@
 # msjche's Suckless dwm build
 
-![Alt text](screencap.png?raw=true "Title")
+![Alt text](clean.png?raw=true "Title")
+![Alt text](dirty.png?raw=true "Title")
 
 You will need my scripts in your $PATH in order for the dwmblocks bar to populate.  Please refer to this repo:
 
