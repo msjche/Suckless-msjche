@@ -108,9 +108,6 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "150x50
 #include <X11/XF86keysym.h>
 static Key keys[] = {
 	/* modifier             key        function        argument */
-	{ MODKEY|ShiftMask,		XK_Escape,	spawn,	SHCMD("[ \"$(printf \"No\\nYes\" | dmenu -i -nb darkred -sb red -sf white -nf gray -p \"Close Xorg?\")\" = Yes ] && killall Xorg") },
-	{ MODKEY,				XK_grave,	spawn,			SHCMD("dmenuunicode") },
-	{ MODKEY|ShiftMask,		XK_l,		spawn,			SHCMD("dmenu-lpass-nu") },
 	{ MODKEY|ControlMask,	XK_Delete,	spawn,			SHCMD("sysact") },
 	{ MODKEY|ShiftMask,     XK_Return,	spawn,          {.v = dmenucmd } },
 	{ MODKEY,               XK_Return, 	spawn,          {.v = termcmd } },
@@ -126,7 +123,7 @@ static Key keys[] = {
 	{ MODKEY,               XK_h,      	setmfact,       {.f = -0.05} },
 	{ MODKEY,               XK_l,      	setmfact,       {.f = +0.05} },
 	{ MODKEY|ControlMask,   XK_Return, 	zoom,           {0} },
-	{ MODKEY,               XK_Tab,    	view,           {0} },
+	{ MODKEY,			    XK_z,    	view,           {0} },
 	{ MODKEY|ShiftMask,     XK_c,      	killclient,     {0} },
 
     /* Layout manipulation */
@@ -159,9 +156,9 @@ static Key keys[] = {
 	{ 0, XF86XK_AudioPlay,			spawn,		SHCMD("mpc pause") },
 
 	/* Screencast commands */
-	{ MODKEY,				XK_Delete,		spawn,		SHCMD("dmenurecord") },
-	{ MODKEY|ShiftMask,		XK_Delete,		spawn,		SHCMD("dmenurecord kill") },
-	{ MODKEY|Mod1Mask,		XK_k,			spawn,		SHCMD("killall screenkey || screenkey &") },
+	{ Mod1Mask,				XK_Delete,		spawn,		SHCMD("dmenurecord") },
+	{ Mod1Mask|ShiftMask,	XK_Delete,		spawn,		SHCMD("dmenurecord kill") },
+	{ Mod1Mask,				XK_k,			spawn,		SHCMD("killall screenkey || screenkey &") },
 	{ 0,					XK_Print,		spawn,		SHCMD("maimpick") },
 
 	/* Switching between monitors */
@@ -170,25 +167,21 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,     XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,     XK_period, tagmon,         {.i = +1 } },
 
-    /* Apps Launched with SUPER + KEY */
-	{ MODKEY,        		  XK_b,    spawn,          CMD("qutebrowser") },
-	{ MODKEY|ShiftMask,       XK_b,    spawn,          CMD("brave") },
-	{ MODKEY,       		  XK_e,    spawn,          CMD("thunar") },
-	{ MODKEY,       		  XK_c,    spawn,          CMD("~/.dmenu/dmenu-edit-configs.sh") },
-	{ MODKEY|ShiftMask,		  XK_w,    spawn,          CMD("st -e nmtui") },
+    /* Apps Launched with Alt + KEY */
+	{ Mod1Mask, 			  XK_grave,spawn,		   SHCMD("dmenuunicode") },
+	{ Mod1Mask,				  XK_l,	   spawn,		   SHCMD("dmenu-lpass-nu") },
+	{ Mod1Mask,        		  XK_b,    spawn,          CMD("qutebrowser") },
+	{ Mod1Mask|ShiftMask,	  XK_b,    spawn,          CMD("brave") },
+	{ Mod1Mask,       		  XK_e,    spawn,          CMD("thunar") },
+	{ Mod1Mask,       		  XK_c,    spawn,          CMD("~/.dmenu/dmenu-edit-configs.sh") },
+	{ Mod1Mask,				  XK_w,    spawn,          CMD("st -e nmtui") },
+	{ Mod1Mask,        		  XK_p,    spawn,          CMD("cpcolor") },
+	{ Mod1Mask|ShiftMask,	  XK_p,    spawn,          CMD("st -e pulsemixer") },
+	{ Mod1Mask, 		      XK_t,    spawn,          CMD("cawbird") },
+	{ Mod1Mask, 			  XK_x,    spawn,          CMD("pkill mpv") },
+	{ Mod1Mask,        		  XK_m,    spawn,          CMD("gromit-mpx") },
 	
     /* Apps Launched with SUPER + ALT + KEY */
-	/* { MODKEY|Mod1Mask,        XK_b,    spawn,          CMD("tabbed -r 2 surf -pe x '.surf/html/homepage.html'") }, */
-	{ MODKEY|Mod1Mask,        XK_p,    spawn,          CMD("st -e ncmpcpp") },
-	{ MODKEY|Mod1Mask,        XK_m,    spawn,          CMD("gromit-mpx") },
-	{ MODKEY|Mod1Mask,        XK_c,    spawn,          CMD("st -e cava") },
-	{ MODKEY|Mod1Mask,        XK_t,    spawn,          CMD("cawbird") },
-	{ MODKEY,		  		  XK_p,    spawn,          CMD("st -e pulsemixer") },
-	{ MODKEY|Mod1Mask,        XK_e,    spawn,          CMD("st -e neomutt") },
-	{ MODKEY|Mod1Mask,        XK_h,    spawn,          CMD("st -e htop") },
-	{ MODKEY|Mod1Mask,        XK_n,    spawn,          CMD("st -e newsboat") },
-	{ MODKEY|Mod1Mask,        XK_r,    spawn,          CMD("st -e rtv") },
-	{ Mod1Mask, 			  XK_x,    spawn,          CMD("pkill mpv") },
 
 	TAGKEYS(                  XK_1,          0)
 	TAGKEYS(                  XK_2,          1)
