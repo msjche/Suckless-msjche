@@ -20,12 +20,12 @@ static const char *fonts[]			= {"Dejavu Sans Mono for Powerline:size=9",
 									"JoyPixels:size=10:antialias=true:autohint=true", 
 									"FontAwesome:size=10:antialias=true:autohint=true", 
 									};
-static const char dmenufont[]		= "Dejavu Sans Mono for Powerline:size=9";
+static const char dmenufont[]		= "Dejavu Sans Mono for Powerline:size=14";
 static const char col_gray1[]		= "#010015";
 static const char col_gray2[]		= "#333333"; /* border color unfocused windows */
-static const char col_gray3[]		= "#96B5B4";
-static const char col_gray4[]		= "#D7D7D7";
-static const char col_blue[]		= "#4d63b3"; /* border color focused windows and tags */
+static const char col_gray3[]		= "#96b5B4";
+static const char col_gray4[]		= "#d7d7d7";
+static const char col_blue[]		= "#7a5Ada"; /* border color focused windows and tags */
 static const char col_red[]			= "#8f3d3d"; /* tag background color */
 static const char col_yellow[]		= "#b38c00"; /* border color */
 /* bar opacity 
@@ -158,7 +158,7 @@ static Key keys[] = {
 	/* Screencast commands */
 	{ Mod1Mask,				XK_Delete,		spawn,		SHCMD("dmenurecord") },
 	{ Mod1Mask|ShiftMask,	XK_Delete,		spawn,		SHCMD("dmenurecord kill") },
-	{ Mod1Mask,				XK_k,			spawn,		SHCMD("killall screenkey || screenkey &") },
+	{ MODKEY|ShiftMask,		XK_k,			spawn,		SHCMD("killall screenkey || screenkey &") },
 	{ 0,					XK_Print,		spawn,		SHCMD("maimpick") },
 
 	/* Switching between monitors */
