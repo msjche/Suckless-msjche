@@ -8,26 +8,26 @@
 
 /* See LICENSE file for copyright and license details. */
 /* appearance */
-static const unsigned int borderpx    = 3;        /* border pixel of windows */
-static const unsigned int snap        = 32;       /* snap pixel */
-static const unsigned int gappx        = 6;        /* pixel gap between clients */
-static const int showbar            = 1;        /* 0 means no bar */
-static const int topbar                = 1;        /* 0 means bottom bar */
-static const int horizpadbar        = 5;        /* horizontal padding for statusbar */
-static const int vertpadbar            = 7;        /* vertical padding for statusbar */
-static const int iscentered            = 1;        /* all windows spawn centered if floating */
-static const char *fonts[]            = {"Dejavu Sans Mono for Powerline:size=9", 
-                                    "JoyPixels:size=10:antialias=true:autohint=true", 
-                                    "FontAwesome:size=10:antialias=true:autohint=true", 
-                                    };
-static const char dmenufont[]        = "Dejavu Sans Mono for Powerline:size=14";
-static const char col_gray1[]        = "#010015";
-static const char col_gray2[]        = "#333333"; /* border color unfocused windows */
-static const char col_gray3[]        = "#96b5B4";
-static const char col_gray4[]        = "#d7d7d7";
-static const char col_blue[]        = "#7a5Ada"; /* border color focused windows and tags */
-static const char col_red[]            = "#8f3d3d"; /* tag background color */
-static const char col_yellow[]        = "#b38c00"; /* border color */
+static const unsigned int borderpx      = 3;        /* border pixel of windows */
+static const unsigned int snap          = 32;       /* snap pixel */
+static const unsigned int gappx         = 6;        /* pixel gap between clients */
+static const int showbar                = 1;        /* 0 means no bar */
+static const int topbar                 = 1;        /* 0 means bottom bar */
+static const int horizpadbar            = 5;        /* horizontal padding for statusbar */
+static const int vertpadbar             = 7;        /* vertical padding for statusbar */
+static const int iscentered             = 1;        /* all windows spawn centered if floating */
+static const char *fonts[]              = {"Dejavu Sans Mono for Powerline:size=9", 
+                                        "JoyPixels:size=10:antialias=true:autohint=true", 
+                                        "FontAwesome:size=10:antialias=true:autohint=true", 
+                                        };
+static const char dmenufont[]           = "Dejavu Sans Mono for Powerline:size=14";
+static const char col_gray1[]           = "#010015";
+static const char col_gray2[]           = "#333333"; /* border color unfocused windows */
+static const char col_gray3[]           = "#96b5B4";
+static const char col_gray4[]           = "#d7d7d7";
+static const char col_blue[]            = "#7a5ada"; /* border color focused windows and tags */
+static const char col_red[]             = "#8f3d3d"; /* tag background color */
+static const char col_yellow[]          = "#b38c00"; /* border color */
 /* bar opacity 
  * 0xff is no transparency.
  * 0xee adds wee bit of transparency.
