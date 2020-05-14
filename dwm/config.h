@@ -158,7 +158,7 @@ static Key keys[] = {
     /* Screencast commands */
     { Mod1Mask,                 XK_Delete,       spawn,        SHCMD("dmenurecord") },
     { Mod1Mask|ShiftMask,       XK_Delete,       spawn,        SHCMD("dmenurecord kill") },
-    { MODKEY|ShiftMask,         XK_k,            spawn,        SHCMD("killall screenkey || screenkey &") },
+    { Mod1Mask|ShiftMask,       XK_k,            spawn,        SHCMD("killall screenkey || screenkey &") },
     { 0,                        XK_Print,        spawn,        SHCMD("maimpick") },
 
     /* Switching between monitors */
