@@ -57,11 +57,11 @@ static const Rule rules[] = {
      *    WM_CLASS(STRING) = instance, class
      *    WM_NAME(STRING) = title
      */
-    /* class        instance    title        tags mask    iscentered        isfloating        monitor */
-    { "Thunar",        NULL,        NULL,        0,            1,                1,                -1 },
-    { "Dolphin",    NULL,        NULL,        0,            1,                1,                -1 },
-    { "Gimp",        NULL,        NULL,        0,            1,                1,                -1 },
-    { "Firefox",    NULL,        NULL,        1 << 8,        0,                0,                -1 },
+    /* class        instance    title      tags mask    iscentered      isfloating        monitor */
+    { "Thunar",     NULL,       NULL,      0,           1,              1,                -1 },
+    { "Dolphin",    NULL,       NULL,      0,           1,              1,                -1 },
+    { "Gimp",       NULL,       NULL,      0,           1,              1,                -1 },
+    { "Firefox",    NULL,       NULL,      1 << 8,      0,              0,                -1 },
 };
 
 /* layout(s) */
@@ -108,11 +108,11 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "150x50
 #include <X11/XF86keysym.h>
 static Key keys[] = {
     /* modifier             key        function        argument */
-    { MODKEY|ControlMask,    XK_Delete,    spawn,            SHCMD("sysact") },
-    { MODKEY|ShiftMask,     XK_Return,    spawn,          {.v = dmenucmd } },
+    { MODKEY|ControlMask,   XK_Delete,     spawn,          SHCMD("sysact") },
+    { MODKEY|ShiftMask,     XK_Return,     spawn,          {.v = dmenucmd } },
     { MODKEY,               XK_Return,     spawn,          {.v = termcmd } },
     { Mod1Mask,             XK_Return,     spawn,          {.v = tabtermcmd } },
-    { MODKEY|ShiftMask,        XK_s,        togglescratch,  {.v = scratchpadcmd } },
+    { MODKEY|ShiftMask,     XK_s,          togglescratch,  {.v = scratchpadcmd } },
     { MODKEY|ShiftMask,     XK_t,          togglebar,      {0} },
     { MODKEY|ShiftMask,     XK_j,          rotatestack,    {.i = +1 } },
     { MODKEY|ShiftMask,     XK_k,          rotatestack,    {.i = -1 } },
@@ -123,7 +123,7 @@ static Key keys[] = {
     { MODKEY,               XK_h,          setmfact,       {.f = -0.05} },
     { MODKEY,               XK_l,          setmfact,       {.f = +0.05} },
     { MODKEY|ControlMask,   XK_Return,     zoom,           {0} },
-    { MODKEY,                XK_z,        view,           {0} },
+    { MODKEY,               XK_z,          view,           {0} },
     { MODKEY|ShiftMask,     XK_c,          killclient,     {0} },
 
     /* Layout manipulation */
@@ -146,20 +146,20 @@ static Key keys[] = {
     { MODKEY|ShiftMask,     XK_0,          tag,            {.ui = ~0 } },
 
     /* Media Keys */
-    { 0, XF86XK_MonBrightnessUp,    spawn,        SHCMD("xbacklight -inc 5") },
-    { 0, XF86XK_MonBrightnessDown,    spawn,        SHCMD("xbacklight -dec 5") },
-    { 0, XF86XK_AudioMute,            spawn,        SHCMD("amixer set Master toggle") },
-    { 0, XF86XK_AudioRaiseVolume,    spawn,        SHCMD("amixer set Master 5%+") },
-    { 0, XF86XK_AudioLowerVolume,    spawn,        SHCMD("amixer set Master 5%-") },
-    { 0, XF86XK_AudioPrev,            spawn,        SHCMD("mpc prev") },
-    { 0, XF86XK_AudioNext,            spawn,        SHCMD("mpc next") },
-    { 0, XF86XK_AudioPlay,            spawn,        SHCMD("mpc pause") },
+    { 0, XF86XK_MonBrightnessUp,        spawn,        SHCMD("xbacklight -inc 5") },
+    { 0, XF86XK_MonBrightnessDown,      spawn,        SHCMD("xbacklight -dec 5") },
+    { 0, XF86XK_AudioMute,              spawn,        SHCMD("amixer set Master toggle") },
+    { 0, XF86XK_AudioRaiseVolume,       spawn,        SHCMD("amixer set Master 5%+") },
+    { 0, XF86XK_AudioLowerVolume,       spawn,        SHCMD("amixer set Master 5%-") },
+    { 0, XF86XK_AudioPrev,              spawn,        SHCMD("mpc prev") },
+    { 0, XF86XK_AudioNext,              spawn,        SHCMD("mpc next") },
+    { 0, XF86XK_AudioPlay,              spawn,        SHCMD("mpc pause") },
 
     /* Screencast commands */
-    { Mod1Mask,                XK_Delete,        spawn,        SHCMD("dmenurecord") },
-    { Mod1Mask|ShiftMask,    XK_Delete,        spawn,        SHCMD("dmenurecord kill") },
-    { MODKEY|ShiftMask,        XK_k,            spawn,        SHCMD("killall screenkey || screenkey &") },
-    { 0,                    XK_Print,        spawn,        SHCMD("maimpick") },
+    { Mod1Mask,                 XK_Delete,       spawn,        SHCMD("dmenurecord") },
+    { Mod1Mask|ShiftMask,       XK_Delete,       spawn,        SHCMD("dmenurecord kill") },
+    { MODKEY|ShiftMask,         XK_k,            spawn,        SHCMD("killall screenkey || screenkey &") },
+    { 0,                        XK_Print,        spawn,        SHCMD("maimpick") },
 
     /* Switching between monitors */
     { MODKEY,               XK_comma,  focusmon,       {.i = -1 } },
@@ -168,18 +168,18 @@ static Key keys[] = {
     { MODKEY|ShiftMask,     XK_period, tagmon,         {.i = +1 } },
 
     /* Apps Launched with Alt + KEY */
-    { Mod1Mask,               XK_grave,spawn,           SHCMD("dmenuunicode") },
-    { Mod1Mask,                  XK_l,       spawn,           SHCMD("dmenu-lpass-nu") },
-    { Mod1Mask,                  XK_b,    spawn,          CMD("qutebrowser") },
-    { Mod1Mask|ShiftMask,      XK_b,    spawn,          CMD("brave") },
-    { Mod1Mask,                 XK_e,    spawn,          CMD("thunar") },
-    { Mod1Mask,                 XK_c,    spawn,          CMD("~/.dmenu/dmenu-edit-configs.sh") },
-    { Mod1Mask,                  XK_w,    spawn,          CMD("st -e nmtui") },
-    { Mod1Mask,                  XK_p,    spawn,          CMD("cpcolor") },
-    { Mod1Mask|ShiftMask,      XK_p,    spawn,          CMD("pavucontrol") },
-    { Mod1Mask,               XK_t,    spawn,          CMD("cawbird") },
-    { Mod1Mask,               XK_x,    spawn,          CMD("pkill mpv") },
-    { Mod1Mask,                  XK_m,    spawn,          CMD("gromit-mpx") },
+    { Mod1Mask,                 XK_grave,   spawn,      SHCMD("dmenuunicode") },
+    { Mod1Mask,                 XK_l,       spawn,      SHCMD("dmenu-lpass-nu") },
+    { Mod1Mask,                 XK_b,       spawn,      CMD("qutebrowser") },
+    { Mod1Mask|ShiftMask,       XK_b,       spawn,      CMD("brave") },
+    { Mod1Mask,                 XK_e,       spawn,      CMD("thunar") },
+    { Mod1Mask,                 XK_c,       spawn,      CMD("~/.dmenu/dmenu-edit-configs.sh") },
+    { Mod1Mask,                 XK_w,       spawn,      CMD("st -e nmtui") },
+    { Mod1Mask,                 XK_p,       spawn,      CMD("cpcolor") },
+    { Mod1Mask|ShiftMask,       XK_p,       spawn,      CMD("pavucontrol") },
+    { Mod1Mask,                 XK_t,       spawn,      CMD("cawbird") },
+    { Mod1Mask,                 XK_x,       spawn,      CMD("pkill mpv") },
+    { Mod1Mask,                 XK_m,       spawn,      CMD("gromit-mpx") },
     
     /* Apps Launched with SUPER + ALT + KEY */
 
@@ -192,8 +192,8 @@ static Key keys[] = {
     TAGKEYS(                  XK_7,          6)
     TAGKEYS(                  XK_8,          7)
     TAGKEYS(                  XK_9,          8)
-    { MODKEY|ShiftMask,       XK_q,       quit,           {0} },
-    { MODKEY|ShiftMask,       XK_r,    quit,           {1} }, 
+    { MODKEY|ShiftMask,       XK_q,          quit,      {0} },
+    { MODKEY|ShiftMask,       XK_r,          quit,      {1} }, 
 };
 
 /* button definitions */
