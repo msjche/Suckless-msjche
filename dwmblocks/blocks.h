@@ -9,9 +9,11 @@ static const Block blocks[] = {
 
     {" ", "torrents",            5,                    7},
 
+    {" ", "mailbox",             600,                  7},
+
 /*    {"", "upt",               60,                    2}, */
 
-    {" 📦 ", "pacupdate",        300,                  8},
+    {" 📦 ", "pacupdate",        72000,                8},
 
 /*    {"🐝 ", "bumblebee",       5,                    8}, */
     
@@ -37,7 +39,7 @@ static const Block blocks[] = {
 
     {"", "internet",             5,                    0},
 
-    {"", "vpn",                  10,                    0},
+    {"", "vpn",                  10,                   0},
 };
 
 //sets delimeter between status commands. NULL character ('\0') means no delimeter.
