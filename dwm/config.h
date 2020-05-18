@@ -171,7 +171,7 @@ static Key keys[] = {
     { Mod1Mask,                 XK_grave,   spawn,      SHCMD("dmenuunicode") },
     { Mod1Mask,                 XK_l,       spawn,      SHCMD("dmenu-lpass-nu") },
     { Mod1Mask,                 XK_b,       spawn,      CMD("qutebrowser") },
-    { Mod1Mask|ShiftMask,       XK_b,       spawn,      CMD("brave") },
+    { Mod1Mask|ShiftMask,       XK_b,       spawn,      CMD("firefox") },
     { Mod1Mask,                 XK_e,       spawn,      CMD("thunar") },
     { Mod1Mask,                 XK_c,       spawn,      CMD("~/.dmenu/dmenu-edit-configs.sh") },
     { Mod1Mask,                 XK_w,       spawn,      CMD("st -e nmtui") },
