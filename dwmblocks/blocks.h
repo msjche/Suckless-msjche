@@ -13,7 +13,7 @@ static const Block blocks[] = {
 
 /*    {"", "upt",               60,                    2}, */
 
-    {" 📦 ", "pacupdate",        72000,                8},
+    {" 📦 ", "pacupdate",        36000,                8},
 
 /*    {"🐝 ", "bumblebee",       5,                    8}, */
 
