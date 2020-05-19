@@ -16,9 +16,9 @@ static const int topbar                 = 1;        /* 0 means bottom bar */
 static const int horizpadbar            = 5;        /* horizontal padding for statusbar */
 static const int vertpadbar             = 7;        /* vertical padding for statusbar */
 static const int iscentered             = 1;        /* all windows spawn centered if floating */
-static const char *fonts[]              = {"Dejavu Sans Mono for Powerline:size=9", 
-                                        "JoyPixels:size=10:antialias=true:autohint=true", 
-                                        "FontAwesome:size=10:antialias=true:autohint=true", 
+static const char *fonts[]              = {"Dejavu Sans Mono for Powerline:size=9",
+                                        "JoyPixels:size=10:antialias=true:autohint=true",
+                                        "FontAwesome:size=10:antialias=true:autohint=true",
                                         };
 static const char dmenufont[]           = "Dejavu Sans Mono for Powerline:size=14";
 static const char col_gray1[]           = "#010015";
@@ -28,12 +28,12 @@ static const char col_gray4[]           = "#d7d7d7";
 static const char col_blue[]            = "#7a5ada"; /* border color focused windows and tags */
 static const char col_red[]             = "#8f3d3d"; /* tag background color */
 static const char col_yellow[]          = "#b38c00"; /* border color */
-/* bar opacity 
+/* bar opacity
  * 0xff is no transparency.
  * 0xee adds wee bit of transparency.
  * Play with the value to get desired transparency.
  */
-static const unsigned int baralpha    = 0xff; 
+static const unsigned int baralpha    = 0xff;
 static const unsigned int borderalpha = OPAQUE;
 static const char *colors[][3]        = {
     /*               fg         bg         border   */
@@ -141,7 +141,7 @@ static Key keys[] = {
     { MODKEY,               XK_o,          setlayout,      {.v = &layouts[5]} },
     { MODKEY,               XK_s,          setlayout,      {.v = &layouts[6]} },
     { MODKEY,               XK_d,          setlayout,      {.v = &layouts[7]} },
-    
+
     { MODKEY,               XK_0,          view,           {.ui = ~0 } },
     { MODKEY|ShiftMask,     XK_0,          tag,            {.ui = ~0 } },
 
@@ -180,7 +180,7 @@ static Key keys[] = {
     { Mod1Mask,                 XK_t,       spawn,      CMD("cawbird") },
     { Mod1Mask,                 XK_x,       spawn,      CMD("pkill mpv") },
     { Mod1Mask,                 XK_m,       spawn,      CMD("gromit-mpx") },
-    
+
     /* Apps Launched with SUPER + ALT + KEY */
 
     TAGKEYS(                  XK_1,          0)
@@ -193,7 +193,7 @@ static Key keys[] = {
     TAGKEYS(                  XK_8,          7)
     TAGKEYS(                  XK_9,          8)
     { MODKEY|ShiftMask,       XK_q,          quit,      {0} },
-    { MODKEY|ShiftMask,       XK_r,          quit,      {1} }, 
+    { MODKEY|ShiftMask,       XK_r,          quit,      {1} },
 };
 
 /* button definitions */
