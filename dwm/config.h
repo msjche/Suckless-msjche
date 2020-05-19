@@ -49,7 +49,7 @@ static const unsigned int alphas[][3] = {
 
 /* tagging */
 /* static const char *tags[] = { "1️⃣", "2️⃣", "3️⃣", "4️⃣", "5️⃣", "6️⃣", "7️⃣", "🎱", "9️⃣" }; */
-static const char *tags[] = { "🐧", "", "📰", ""🎵, "🔍", "💀", "👷", "🕹", "📺" };
+static const char *tags[] = { "🐧", "", "📰", "📧", "🔍", "💀", "👷", "🕹", "📺" };
 
 
 static const Rule rules[] = {
@@ -170,11 +170,11 @@ static Key keys[] = {
     /* Apps Launched with Alt + KEY */
     { Mod1Mask,                 XK_grave,   spawn,      SHCMD("dmenuunicode") },
     { Mod1Mask,                 XK_l,       spawn,      SHCMD("dmenu-lpass-nu") },
+    { Mod1Mask,                 XK_w,       spawn,      CMD("networkmanager_dmenu") },
     { Mod1Mask,                 XK_b,       spawn,      CMD("qutebrowser") },
     { Mod1Mask|ShiftMask,       XK_b,       spawn,      CMD("firefox") },
     { Mod1Mask,                 XK_e,       spawn,      CMD("thunar") },
     { Mod1Mask,                 XK_c,       spawn,      CMD("~/.dmenu/dmenu-edit-configs.sh") },
-    { Mod1Mask,                 XK_w,       spawn,      CMD("st -e nmtui") },
     { Mod1Mask,                 XK_p,       spawn,      CMD("cpcolor") },
     { Mod1Mask|ShiftMask,       XK_p,       spawn,      CMD("pavucontrol") },
     { Mod1Mask,                 XK_t,       spawn,      CMD("cawbird") },
