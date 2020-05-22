@@ -3,7 +3,7 @@
 dmenu \- dynamic menu
 .SH SYNOPSIS
 .B dmenu
-.RB [ \-bfiv ]
+.RB [ \-bfirvP ]
 .RB [ \-l
 .IR lines ]
 .RB [ \-m
@@ -40,15 +40,18 @@ which lists programs in the user's $PATH and runs the result in their $SHELL.
 .B \-b
 dmenu appears at the bottom of the screen.
 .TP
-.B \-c
-dmenu appears centered on the screen.
-.TP
 .B \-f
 dmenu grabs the keyboard before reading stdin if not reading from a tty. This
 is faster, but will lock up X until stdin reaches end\-of\-file.
 .TP
 .B \-i
 dmenu matches menu items case insensitively.
+.TP
+.B \-P
+dmenu will not directly display the keyboard input, but instead replace it with dots. All data from stdin will be ignored.
+.TP
+.B \-r
+dmenu will reject any input which would result in no matching option left.
 .TP
 .BI \-l " lines"
 dmenu lists items vertically, with the given number of lines.
