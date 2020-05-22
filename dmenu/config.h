@@ -7,14 +7,14 @@ static const char *fonts[] = {
     "Dejavu San Mono for Powerline:size=12",
     "JoyPixels:size=12:antialias=true:autohint=true",
 };
-static const unsigned int bgalpha = 0xee;
+static const unsigned int bgalpha = OPAQUE;
 static const unsigned int fgalpha = OPAQUE;
 static const char *prompt      = NULL;      /* -p  option; prompt to the left of input field */
 static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { "#bbbbbb", "#010015" },
 	[SchemeSel] = { "#eeeeee", "#7a5ada" },
-	[SchemeSelHighlight] = { "#ffc978", "#005577" },
+	[SchemeSelHighlight] = { "#010015", "#8f3d3d" },
 	[SchemeNormHighlight] = { "#9c7a00", "#222222" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
