@@ -1,3 +1,11 @@
+
+/*       _ __ ___  ___ (_) ___| |__   ___       */
+/*      | '_ ` _ \/ __|| |/ __| '_ \ / _ \      */
+/*      | | | | | \__ \| | (__| | | |  __/      */
+/*      |_| |_| |_|___// |\___|_| |_|\___|      */
+/*                   |__/                       */
+/*            MoJo's dmenu config               */
+
 /* See LICENSE file for copyright and license details. */
 /* Default settings; can be overriden by command line. */
 
@@ -14,7 +22,7 @@ static const char *colors[SchemeLast][2] = {
 	/*     fg         bg       */
 	[SchemeNorm] = { "#bbbbbb", "#010015" },
 	[SchemeSel] = { "#eeeeee", "#7a5ada" },
-	[SchemeSelHighlight] = { "#010015", "#8f3d3d" },
+	[SchemeSelHighlight] = { "#ffde66", "#222222" },
 	[SchemeNormHighlight] = { "#9c7a00", "#222222" },
 	[SchemeOut] = { "#000000", "#00ffff" },
 };
