@@ -147,14 +147,14 @@ static Key keys[] = {
     { MODKEY|ShiftMask,     XK_0,          tag,            {.ui = ~0 } },
 
     /* Media Keys */
-    { 0, XF86XK_MonBrightnessUp,        spawn,        SHCMD("xbacklight -inc 5") },
-    { 0, XF86XK_MonBrightnessDown,      spawn,        SHCMD("xbacklight -dec 5") },
-    { 0, XF86XK_AudioMute,              spawn,        SHCMD("amixer set Master toggle") },
-    { 0, XF86XK_AudioRaiseVolume,       spawn,        SHCMD("amixer set Master 5%+") },
-    { 0, XF86XK_AudioLowerVolume,       spawn,        SHCMD("amixer set Master 5%-") },
-    { 0, XF86XK_AudioPrev,              spawn,        SHCMD("mpc prev") },
-    { 0, XF86XK_AudioNext,              spawn,        SHCMD("mpc next") },
-    { 0, XF86XK_AudioPlay,              spawn,        SHCMD("mpc pause") },
+    { 0, XF86XK_MonBrightnessUp,     spawn,        SHCMD("xbacklight -inc 5") },
+    { 0, XF86XK_MonBrightnessDown,   spawn,        SHCMD("xbacklight -dec 5") },
+    { 0, XF86XK_AudioMute,           spawn,        SHCMD("amixer set Master toggle") },
+    { 0, XF86XK_AudioRaiseVolume,    spawn,        SHCMD("amixer set Master 5%+") },
+    { 0, XF86XK_AudioLowerVolume,    spawn,        SHCMD("amixer set Master 5%-") },
+    { 0, XF86XK_AudioPrev,           spawn,        SHCMD("mpc prev") },
+    { 0, XF86XK_AudioNext,           spawn,        SHCMD("mpc next") },
+    { 0, XF86XK_AudioPlay,           spawn,        SHCMD("mpc pause") },
 
     /* Screencast commands */
     { Mod1Mask,                 XK_Delete,       spawn,        SHCMD("dmenurecord") },
