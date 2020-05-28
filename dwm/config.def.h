@@ -171,11 +171,12 @@ static Key keys[] = {
     /* Apps Launched with Alt + KEY */
     { Mod1Mask,                 XK_grave,   spawn,      SHCMD("dmenuunicode") },
     { Mod1Mask,                 XK_l,       spawn,      SHCMD("dmenu-lpass-nu") },
+    { Mod1Mask,                 XK_c,       spawn,      SHCMD("mmenu") },
     { Mod1Mask,                 XK_w,       spawn,      CMD("networkmanager_dmenu") },
     { Mod1Mask,                 XK_b,       spawn,      CMD("qutebrowser") },
     { Mod1Mask|ShiftMask,       XK_b,       spawn,      CMD("firefox") },
     { Mod1Mask,                 XK_e,       spawn,      CMD("thunar") },
-    { Mod1Mask,                 XK_c,       spawn,      CMD("~/.dmenu/dmenu-edit-configs.sh") },
+    { Mod1Mask|ShiftMask,       XK_c,       spawn,      CMD("~/.dmenu/dmenu-edit-configs.sh") },
     { Mod1Mask,                 XK_p,       spawn,      CMD("cpcolor") },
     { Mod1Mask|ShiftMask,       XK_p,       spawn,      CMD("pavucontrol") },
     { Mod1Mask,                 XK_t,       spawn,      CMD("cawbird") },
