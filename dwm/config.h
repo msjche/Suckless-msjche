@@ -176,6 +176,7 @@ static Key keys[] = {
     { Mod1Mask,                 XK_b,       spawn,      CMD("qutebrowser") },
     { Mod1Mask|ShiftMask,       XK_b,       spawn,      CMD("firefox") },
     { Mod1Mask,                 XK_e,       spawn,      CMD("thunar") },
+    { Mod1Mask,                 XK_n,       spawn,      CMD("st -e vim ~/Dropbox/Lehigh/Notes/") },
     { Mod1Mask|ShiftMask,       XK_c,       spawn,      CMD("~/.dmenu/dmenu-edit-configs.sh") },
     { Mod1Mask,                 XK_p,       spawn,      CMD("cpcolor") },
     { Mod1Mask|ShiftMask,       XK_p,       spawn,      CMD("pavucontrol") },
