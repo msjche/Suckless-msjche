@@ -9,11 +9,11 @@ static const Block blocks[] = {
 
     {" ", "torrents",            5,                    7},
 
-    {" ", "mailbox",             600,                  7},
+    {" ", "mailbox",             4,                  7},
 
 /*    {"", "upt",               60,                    2}, */
 
-    {" 📦 ", "pacupdate",        7200,                 8},
+    {" 📦 ", "pacupdate",        3600,                 8},
 
 /*    {"🐝 ", "bumblebee",       5,                    8}, */
 
