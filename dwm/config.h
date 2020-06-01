@@ -25,7 +25,7 @@ static const char col_gray1[]           = "#1a1a1a";
 static const char col_gray2[]           = "#1a1a1a"; /* border color unfocused windows */
 static const char col_gray3[]           = "#96b5B4";
 static const char col_gray4[]           = "#d7d7d7";
-static const char col_blue[]            = "#1793d1"; /* border color focused windows and tags */
+static const char col_blue[]            = "#1793d0"; /* border color focused windows and tags */
 static const char col_red[]             = "#8f3d3d"; /* tag background color */
 static const char col_yellow[]          = "#b38c00"; /* border color */
 /* bar opacity
