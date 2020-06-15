@@ -183,6 +183,7 @@ static Key keys[] = {
     { Mod1Mask,                 XK_t,       spawn,      CMD("cawbird") },
     { Mod1Mask,                 XK_x,       spawn,      CMD("pkill mpv") },
     { Mod1Mask,                 XK_m,       spawn,      CMD("gromit-mpx") },
+    { Mod1Mask,                 XK_d,       spawn,      CMD("doppler") },
 
     /* Apps Launched with SUPER + ALT + KEY */
 
